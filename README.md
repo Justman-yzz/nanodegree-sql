@@ -7,7 +7,22 @@
 
 > SQL이 실행됐다는 사실보다 **어떤 조건으로, 무엇을 세고, 누구를 분석에 남겼는지** 설명하는 연습을 기록했다.
 
-[강의·실습](#3-주요-실습-내용) · [SQL 예시](#4-주요-sql과-설명) · [문제 해결](#5-문제-해결-과정) · [배운 점](#7-배운-점)
+[🧠 핵심 복습](#5분-핵심-복습) · [강의·실습](#3-주요-실습-내용) · [SQL 예시](#4-주요-sql과-설명) · [문제 해결](#5-문제-해결-과정) · [배운 점](#7-배운-점)
+
+---
+
+### 5분 핵심 복습
+
+나중에 다시 공부할 때는 **아래 질문을 스스로 답해 보고**, 막히는 부분만 상세 노트로 돌아가면 된다.
+
+| 스스로 확인할 질문 | 떠올릴 SQL·개념 | 더 읽기 |
+|:--|:--|:--|
+| 원하는 행을 정확히 골랐나? | `WHERE` · 날짜·코드값 · `ORDER BY` | [조회·JOIN 노트](field-notes/day-01.md) |
+| 명세서 건수와 환자 수를 구별했나? | `COUNT(*)` vs `COUNT(DISTINCT)` · `GROUP BY` | [집계·윈도우 노트](field-notes/day-02.md) |
+| 방문 순서와 직전 기록을 구할 수 있나? | `ROW_NUMBER` · `LAG` · `OVER` · `WITH` | [집계·윈도우 노트](field-notes/day-02.md) |
+| JOIN 후 분석 대상이 달라졌나? | `INNER/LEFT JOIN` · `CASE` · `NULL` | [코호트 노트](field-notes/day-03.md) |
+
+**[📖 개념별 핵심 복습 보기](review/quick-review.md) · [✍️ 정답 가리고 10문제 풀기](review/self-check.md) · [📚 전체 강의 원본 정리](deep-notes/day-01-full.md)**
 
 ---
 
@@ -169,6 +184,7 @@ SQL을 배우면서 가장 크게 느낀 것은 **쿼리가 실행되는 것과 
 |:--|:--|
 | 메인 소개 | **현재 README** (`README.md`) |
 | 강의 핵심 노트 | [`field-notes/`](field-notes/) |
+| **5분 핵심 복습·자가 점검** | [개념 복습](review/quick-review.md) · [셀프 체크](review/self-check.md) |
 | 상세 강의 노트 | [`deep-notes/`](deep-notes/) |
 | 과제 1·2·3 정리 | [`assignments/`](assignments/) |
 | 과제별 SQL 재구성 | [`sql/assignments/`](sql/assignments/) |
