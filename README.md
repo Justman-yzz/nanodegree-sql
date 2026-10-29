@@ -196,7 +196,7 @@ SQL을 배우면서 가장 크게 느낀 것은 **쿼리가 실행되는 것과 
 | 오류·문제 해결 사례 | [`case-studies/`](case-studies/) |
 | 실행 및 검증 안내 | [`docs/verification.md`](docs/verification.md) |
 
-**GitHub 저장소 URL:** 공개 저장소 `nanodegree-sql`을 생성한 뒤, GitHub에서 실제 생성된 주소를 복사해 나노디그리 제출란에 입력한다. **아직 존재하지 않는 주소를 활성 링크로 표시하지 않는다.**
+**GitHub 저장소 URL:** https://github.com/Justman-yzz/nanodegree-sql
 
 **관련 별도 프로젝트:** [NEXT VALUE — Hitter Radar](https://github.com/Justman-yzz/next-value-hitter-radar) — AI Agent 수업 프로젝트. 이 SQL 수업 실습 데이터와 직접 연결한 프로젝트라고 주장하지 않는다.
 
