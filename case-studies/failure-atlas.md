@@ -27,4 +27,4 @@
 
 ---
 
-[DAY 01](../field-notes/day-01.md) · [DAY 02](../field-notes/day-02.md) · [DAY 03](../field-notes/day-03.md) · [메인으로](../README.md)
+[조회·JOIN](../field-notes/day-01.md) · [집계·윈도우](../field-notes/day-02.md) · [CTE·코호트](../field-notes/day-03.md) · [메인으로](../README.md)
