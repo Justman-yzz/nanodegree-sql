@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="560" viewBox="0 0 1000 560">
+<rect width="1000" height="560" fill="#0B1525" rx="20"/>
+<text x="50" y="70" fill="#A5BDD2" font-size="18" font-family="Arial, sans-serif" letter-spacing="3">CASE STUDY 03  /  SYNTHETIC DATA</text>
+<text x="50" y="125" fill="#F3F7FD" font-size="34" font-weight="700" font-family="Arial, sans-serif">병기별 1,095일 내 사망 기록 비율</text>
+<text x="50" y="160" fill="#8EA7BC" font-size="17" font-family="Arial, sans-serif">2010–2017 진단 코호트 · 6,873명 · 의료적 생존 예측 아님</text>
+<text x="52" y="229" fill="#F0F5FB" font-size="23" font-family="Arial, sans-serif">초기</text>
+<text x="52" y="253" fill="#9FB2C5" font-size="15" font-family="Arial, sans-serif">2,666명</text>
+<rect x="300" y="214" width="570" height="27" rx="9" fill="#26374B"/>
+<rect x="300" y="214" width="106.0" height="27" rx="9" fill="#66DAC5"/>
+<text x="900" y="237" fill="#66DAC5" font-size="26" font-weight="700" text-anchor="end" font-family="Arial, sans-serif">13.02%</text>
+<text x="52" y="306" fill="#F0F5FB" font-size="23" font-family="Arial, sans-serif">국소 진행</text>
+<text x="52" y="330" fill="#9FB2C5" font-size="15" font-family="Arial, sans-serif">1,098명</text>
+<rect x="300" y="291" width="570" height="27" rx="9" fill="#26374B"/>
+<rect x="300" y="291" width="396.7" height="27" rx="9" fill="#8EAEF4"/>
+<text x="900" y="314" fill="#8EAEF4" font-size="26" font-weight="700" text-anchor="end" font-family="Arial, sans-serif">48.72%</text>
+<text x="52" y="383" fill="#F0F5FB" font-size="23" font-family="Arial, sans-serif">전이</text>
+<text x="52" y="407" fill="#9FB2C5" font-size="15" font-family="Arial, sans-serif">2,879명</text>
+<rect x="300" y="368" width="570" height="27" rx="9" fill="#26374B"/>
+<rect x="300" y="368" width="519.8" height="27" rx="9" fill="#F2AD73"/>
+<text x="900" y="391" fill="#F2AD73" font-size="26" font-weight="700" text-anchor="end" font-family="Arial, sans-serif">63.84%</text>
+<text x="52" y="460" fill="#F0F5FB" font-size="23" font-family="Arial, sans-serif">병기 미상</text>
+<text x="52" y="484" fill="#9FB2C5" font-size="15" font-family="Arial, sans-serif">230명</text>
+<rect x="300" y="445" width="570" height="27" rx="9" fill="#26374B"/>
+<rect x="300" y="445" width="385.9" height="27" rx="9" fill="#C6A0EF"/>
+<text x="900" y="468" fill="#C6A0EF" font-size="26" font-weight="700" text-anchor="end" font-family="Arial, sans-serif">47.39%</text>
+<line x1="50" y1="503" x2="948" y2="503" stroke="#293A4E"/>
+<text x="50" y="531" fill="#96A9BD" font-size="15" font-family="Arial, sans-serif">Source: prior assignment result · 3-year recorded event fraction · not a survival estimate</text>
+</svg>
