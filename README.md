@@ -72,6 +72,9 @@
 
 [과제 전체 기록](assignments/README.md) · [SQL 실습 코드](sql/practice/)
 
+### SQL 강의 한눈에 보기
+
+![SQL 강의 핵심 개념과 실습 결과, 학습 회고 요약](assets/sql-learning-overview.png)
 ## 4. 주요 SQL과 설명
 
 ### 4-1. 기간·서식 조건으로 정확한 기록 고르기
