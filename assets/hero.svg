@@ -1,40 +1,47 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="525" viewBox="0 0 1400 525" role="img" aria-label="BEYOND THE QUERY. 실행된 쿼리보다 믿을 수 있는 결과. SQL 학습 포트폴리오. 3일 6교시. 두 교육용 데이터셋.">
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="650" viewBox="0 0 1500 650" role="img" aria-label="SQL 강의·실습 기록 표지. BEYOND THE QUERY. J209 조건의 집계에서 명세서 2554건과 고유 수진자 894명은 서로 다른 단위임을 강조한 편집형 타이포그래피 표지. WHERE 조건, COUNT 집계 단위, JOIN 검산의 핵심 학습을 함께 제시.">
 <defs>
- <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#08111E"/><stop offset=".62" stop-color="#101E32"/><stop offset="1" stop-color="#0A1726"/></linearGradient>
- <linearGradient id="trace" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#5BE0CF"/><stop offset="1" stop-color="#6EABFF"/></linearGradient>
- <pattern id="grid" width="38" height="38" patternUnits="userSpaceOnUse"><path d="M 38 0 L 0 0 0 38" stroke="#30445A" stroke-opacity=".29" fill="none" stroke-width="1"/></pattern>
- <filter id="glow" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="11"/></filter>
+ <pattern id="paper" width="17" height="17" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r=".65" fill="#C4C1B7" opacity=".29"/></pattern>
+ <pattern id="ruled" width="17" height="17" patternUnits="userSpaceOnUse"><path d="M0 16.5H17" stroke="#D5D7CC" opacity=".35" stroke-width=".5"/></pattern>
 </defs>
-<rect width="1400" height="525" fill="url(#bg)"/><rect x="700" width="700" height="525" fill="url(#grid)"/>
-<rect x="48" y="40" width="4" height="39" rx="2" fill="#4BD8C5"/>
-<text x="67" y="65" fill="#90B8C9" font-family="Arial, sans-serif" font-size="18" letter-spacing="3">NANODEGREE   /   SQL FIELD NOTES</text>
-<text x="48" y="175" fill="#EFF6FF" font-family="Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">BEYOND</text>
-<text x="48" y="247" fill="#EFF6FF" font-family="Arial, sans-serif" font-size="60" font-weight="700" letter-spacing="-2">THE QUERY<tspan fill="#4BD8C5">.</tspan></text>
-<path d="M 48 286 L 582 286" stroke="#35506A" stroke-width="1"/>
-<text x="48" y="330" fill="#BDD0DD" font-family="'Noto Sans CJK KR','Malgun Gothic',sans-serif" font-size="23">실행된 쿼리보다, 믿을 수 있는 결과.</text>
-<text x="48" y="384" fill="#7F9BAF" font-family="Arial,sans-serif" font-size="16" letter-spacing="2">SELECT  →  VERIFY  →  INTERPRET</text>
-<rect x="48" y="435" width="195" height="42" rx="21" fill="#153A3B" stroke="#2E8D83"/>
-<text x="145" y="462" fill="#B6F3E9" font-family="Arial,sans-serif" font-size="15" text-anchor="middle">3 DAYS · 6 SESSIONS</text>
-<rect x="255" y="435" width="220" height="42" rx="21" fill="#1B2F47" stroke="#426380"/>
-<text x="365" y="462" fill="#C5D7EB" font-family="Arial,sans-serif" font-size="15" text-anchor="middle">HEALTHCARE DATA</text>
-<g transform="translate(760 78)">
- <rect width="588" height="366" rx="18" fill="#0C1929" stroke="#365268" stroke-width="1.3"/>
- <rect width="588" height="49" rx="18" fill="#14283A"/><rect y="28" width="588" height="21" fill="#14283A"/>
- <circle cx="26" cy="24" r="5" fill="#4BD8C5"/><circle cx="45" cy="24" r="5" fill="#426883"/><circle cx="64" cy="24" r="5" fill="#426883"/>
- <text x="94" y="30" fill="#9DB5C8" font-family="Arial" font-size="14" letter-spacing="1">RESULT VALIDATION / 03 SIGNALS</text>
- <text x="28" y="89" fill="#6FA6B9" font-family="Arial" font-size="13">01 / JOIN</text>
- <text x="28" y="119" fill="#E0EDF7" font-family="Arial" font-weight="700" font-size="27">8,436</text><path d="M 143 112 L 208 112" stroke="#608197" stroke-width="2" stroke-dasharray="5 6"/>
- <text x="225" y="119" fill="#F3B779" font-family="Arial" font-weight="700" font-size="27">3,293</text>
- <text x="28" y="147" fill="#8AA4B5" font-family="'Noto Sans CJK KR','Malgun Gothic',sans-serif" font-size="14">INNER JOIN으로 분모가 사라지는 사례</text>
- <path d="M 28 169 H 560" stroke="#2D4357"/>
- <text x="28" y="198" fill="#6FA6B9" font-family="Arial" font-size="13">02 / DATA TYPE</text>
- <text x="28" y="231" fill="#DCE9F7" font-family="monospace" font-size="23">'x'  <tspan fill="#F3B779">→</tspan>  0</text>
- <text x="200" y="231" fill="#98AEC0" font-family="'Noto Sans CJK KR','Malgun Gothic',sans-serif" font-size="14">경고만 남고 그룹이 달라진다</text>
- <path d="M 28 251 H 560" stroke="#2D4357"/>
- <text x="28" y="280" fill="#6FA6B9" font-family="Arial" font-size="13">03 / CENSORING</text>
- <text x="28" y="318" fill="#EAF6FF" font-family="Arial" font-weight="700" font-size="30">48.6%</text>
- <text x="161" y="318" fill="#A5BCD0" font-family="'Noto Sans CJK KR','Malgun Gothic',sans-serif" font-size="14">추적 종료 전에 기록이 끊긴 사례</text>
- <rect x="28" y="337" width="520" height="5" rx="2.5" fill="#243E52"/><rect x="28" y="337" width="253" height="5" rx="2.5" fill="url(#trace)"/>
-</g>
-<text x="1350" y="491" text-anchor="end" fill="#60899F" font-family="Arial" font-size="12" letter-spacing="1">EDUCATIONAL / SYNTHETIC DATA ONLY</text>
+<rect width="1500" height="650" fill="#F7F3E9"/>
+<rect width="1500" height="650" fill="url(#paper)"/>
+<!-- Editorial masthead -->
+<path d="M67 59H1433" stroke="#192F34" stroke-width="2.7"/>
+<circle cx="83" cy="40" r="8.5" fill="#C74C34"/>
+<text x="102" y="46" font-size="14" font-family="'DejaVu Sans',Arial,sans-serif" font-weight="bold" letter-spacing="2" fill="#233A3A">SQL / LEARNING NOTES</text>
+<text x="1425" y="46" text-anchor="end" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="15" fill="#233A3A">강의 · 실습 · 과제 기록</text>
+<text x="750" y="191" text-anchor="middle" font-family="'DejaVu Serif',Georgia,serif" font-size="91" font-weight="bold" letter-spacing="-6.5" fill="#152B30">BEYOND THE QUERY</text>
+<!-- Big reveal: no symmetrical cards, no dashboard content -->
+<path d="M535 215Q754 230 965 213" fill="none" stroke="#B64133" stroke-width="5" stroke-linecap="round"/>
+<text x="750" y="276" text-anchor="middle" font-size="33" font-weight="bold" font-family="'NanumMyeongjo','Noto Serif CJK KR',serif" fill="#1B3436">숫자를 구하는 것보다, 그 숫자가 뜻하는 것을 이해하기.</text>
+<text x="750" y="310" text-anchor="middle" font-size="17" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" fill="#65706C">J209 실습에서 배운 집계 단위의 차이</text>
+<path d="M67 339H1433" stroke="#1B3436" stroke-width="1.5"/>
+
+<!-- The single meaningful comparison -->
+<text x="89" y="384" font-size="18" font-family="'DejaVu Sans Mono',monospace" letter-spacing=".2" fill="#556464">COUNT(*)</text>
+<text x="936" y="384" font-size="18" font-family="'DejaVu Sans Mono',monospace" letter-spacing=".2" fill="#556464">COUNT(DISTINCT jid)</text>
+<text x="80" y="494" font-family="'DejaVu Sans',Arial,sans-serif" font-size="110" font-weight="bold" letter-spacing="-7" fill="#162F34">2,554</text>
+<text x="488" y="478" font-size="35" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-weight="bold" fill="#162F34">건</text>
+<!-- Circle drawn as editor's proof mark -->
+<ellipse cx="755" cy="457" rx="59" ry="55" fill="none" stroke="#BD4536" stroke-width="3.5" transform="rotate(-14 755 457)"/>
+<text x="755" y="476" text-anchor="middle" font-size="67" font-family="'DejaVu Sans',sans-serif" fill="#BD4536" font-weight="bold">≠</text>
+<text x="933" y="494" font-family="'DejaVu Sans',Arial,sans-serif" font-size="110" font-weight="bold" letter-spacing="-7" fill="#167278">894</text>
+<text x="1210" y="479" font-size="35" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-weight="bold" fill="#167278">명</text>
+<path d="M83 515H554M932 515H1417" stroke="#BBC0B5" stroke-width="1"/>
+<text x="90" y="546" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="19" fill="#47595A">청구 명세서: 조건에 맞는 기록 수</text>
+<text x="940" y="546" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="19" fill="#47595A">고유 수진자: 중복을 제외한 사람 수</text>
+<!-- handwritten correction demonstrates thought, not decoration -->
+<text x="750" y="542" text-anchor="middle" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="16" fill="#B64033" font-weight="bold">한 건 ≠ 한 명</text>
+<path d="M694 553Q749 561 811 552" fill="none" stroke="#B64033" stroke-width="2"/>
+
+<!-- Numbered learning prompts, text-first, no boxes -->
+<path d="M67 580H1433" stroke="#1B3436" stroke-width="1.6"/>
+<text x="78" y="616" font-family="'DejaVu Sans Mono',monospace" font-size="14" fill="#B64133">WHERE</text>
+<text x="155" y="616" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="17" fill="#273B3C">조건이 맞는가?</text>
+<path d="M484 595v24" stroke="#B7BDB5" stroke-width="1.5"/>
+<text x="516" y="616" font-family="'DejaVu Sans Mono',monospace" font-size="14" fill="#B64133">GROUP BY</text>
+<text x="638" y="616" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="17" fill="#273B3C">집계 기준이 맞는가?</text>
+<path d="M958 595v24" stroke="#B7BDB5" stroke-width="1.5"/>
+<text x="991" y="616" font-family="'DejaVu Sans Mono',monospace" font-size="14" fill="#B64133">JOIN</text>
+<text x="1057" y="616" font-family="'NanumGothic','Noto Sans CJK KR',sans-serif" font-size="17" fill="#273B3C">분석 대상이 그대로인가?</text>
 </svg>

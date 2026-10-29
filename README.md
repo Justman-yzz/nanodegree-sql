@@ -1,36 +1,29 @@
-<div align="center">
+![BEYOND THE QUERY — SQL 강의에서 배운 조회 조건, 집계 단위, JOIN 검산](assets/hero.svg)
 
-![BEYOND THE QUERY — SQL Field Notes](assets/hero.svg)
+# BEYOND THE QUERY
 
-### 실행된 SQL보다, 믿을 수 있는 결과.
+**나노디그리 SQL 강의 · 실습 · 과제 기록**  
+`MySQL` · `DBeaver` · `SELECT / JOIN` · `GROUP BY / 윈도우 함수` · `CTE / 코호트`
 
-**SQL · MySQL · DBeaver · Healthcare Data · Cohort Analysis**
+> SQL이 실행됐다는 사실보다 **어떤 조건으로, 무엇을 세고, 누구를 분석에 남겼는지** 설명하는 연습을 기록했다.
 
-교육용 의료 데이터를 통해 익힌 SQL 3일·6교시의 핵심 개념과 실제 과제 기록을 정리한 학습 포트폴리오.
-
-**[학습 기록](#3-주요-실습-내용) · [SQL 코드](#4-주요-sql과-설명) · [결과 보기](#6-실행-결과) · [배운 점](#7-배운-점)**
-
-</div>
+[강의·실습](#3-주요-실습-내용) · [SQL 예시](#4-주요-sql과-설명) · [문제 해결](#5-문제-해결-과정) · [배운 점](#7-배운-점)
 
 ---
 
-> **THE QUESTION**  
-> 쿼리에 오류가 없더라도 분석 결과는 틀릴 수 있다.  
-> 어떤 행을 선택했고, 누구를 분모에 남겼으며, 어떤 근거로 결과를 해석했는지가 중요하다.
-
 ## 1. 프로젝트 소개
 
-**BEYOND THE QUERY — SQL FIELD NOTES**는 2026년 10월 나노디그리 SQL 강의 1~3일차에서 배운 내용을 실습 및 과제와 연결해 정리한 저장소다.
+나노디그리 SQL 강의에서 익힌 개념을 의료 청구 형식의 교육용 데이터에 적용해 보고, **실습 쿼리·과제 집계·문제 해결·학습 회고**를 연결해 정리한 저장소다.
 
-건강보험 청구 형식의 교육용 데이터와 폐암 합성데이터를 이용해, **조건 조회 → 다중 테이블 연결 → 집계 및 방문 이력 분석 → 코호트와 사망 기록 분석**으로 학습 범위를 넓혔다. 단순히 정답 숫자를 제시하기보다 잘못된 JOIN, 데이터 코드, 비율의 분모처럼 결과를 왜곡할 수 있는 지점을 함께 기록했다.
+특히 세 가지 질문을 중심으로 공부했다.
 
-| 학습 범위 | 실제로 다룬 질문 | 대표 데이터 |
+| 핵심 질문 | 관련 SQL | 실제 실습에서 확인한 점 |
 |:--|:--|:--|
-| **01 / READ** | 필요한 청구 기록을 정확히 찾았는가? | 청구 명세서 **38,375행** |
-| **02 / COMPARE** | 집계·방문 패턴에 따라 해석이 달라지는가? | 고혈압·당뇨 등 상병 및 방문 기록 |
-| **03 / DEFINE** | 누구를 대상으로, 어느 기간의 사건을 셌는가? | 폐암 합성데이터 **9,897명** |
+| **조회 조건이 맞는가?** | `WHERE`, `JOIN` | `I10`으로 조회한 0건이 코드 저장 방식(`I109`) 때문일 수 있었다. |
+| **무엇을 한 건으로 세는가?** | `GROUP BY`, `COUNT(DISTINCT)`, `LAG` | J209 **2,554건**과 고유 수진자 **894명**은 서로 다른 지표다. |
+| **누가 분석에 남는가?** | `WITH`, `LEFT JOIN`, `CASE` | 사망 기록이 없는 사람을 조인에서 제외하면 분석 대상 자체가 달라진다. |
 
-**데이터 윤리:** `kr_claims`의 청구·환자 기록은 교육용 가상 데이터이고, `kr_lung_cancer`는 공개된 폐암 합성데이터다. **실제 환자의 임상 결과가 아니며 원본 환자 단위 기록은 이 저장소에 포함하지 않는다.**
+**데이터 안내:** 강의 자료는 교육용 가상·합성데이터다. 실제 환자의 의료 결과로 해석하지 않으며, 원본 환자 단위 데이터와 접속정보는 공개하지 않는다.
 
 ## 2. 사용 기술
 
@@ -48,31 +41,21 @@
 
 ## 3. 주요 실습 내용
 
-| 날짜 / 범위 | 학습 내용 | 대표 실습 | 기록 |
+| 강의 주제 | 복습할 내용 | 기록 |
+|:--|:--|:--|
+| **조회 · 테이블 연결** | SELECT, WHERE, 정렬, JOIN과 코드 확인 | [핵심 노트](field-notes/day-01.md) · [상세 강의 정리](deep-notes/day-01-full.md) |
+| **집계 · 방문 이력** | GROUP BY, HAVING, 윈도우 함수와 환자별 방문 간격 | [핵심 노트](field-notes/day-02.md) · [상세 강의 정리](deep-notes/day-02-full.md) |
+| **코호트 · 사건 분석** | CTE, CASE, LEFT JOIN, NULL과 분석 대상 정의 | [핵심 노트](field-notes/day-03.md) · [상세 강의 정리](deep-notes/day-03-full.md) |
+
+강의 노트는 개념부터 예시까지 남겨 두었고, 과제 기록과 SQL 코드는 별도 폴더에 정리했다.
+
+| 과제 | 분석 질문 | 확인한 집계 | 과제·코드 |
 |:--|:--|:--|:--|
-| **DAY 01 — READ** (1·2교시) | SELECT · WHERE · JOIN | 2025년 특정 월 외래 청구, 상병코드에 이름 붙이기 | [핵심](field-notes/day-01.md) · [상세](deep-notes/day-01-full.md) |
-| **DAY 02 — COMPARE** (3·4교시) | GROUP BY · HAVING · 윈도우 함수 | 기관 종별 진료비 비교, 고혈압 방문 간격 | [핵심](field-notes/day-02.md) · [상세](deep-notes/day-02-full.md) |
-| **DAY 03 — DEFINE** (5·6교시) | CTE · 코호트 · CASE · LEFT JOIN | 진단 연도별 사망 기록, 병기별 치료·사망 비율 | [핵심](field-notes/day-03.md) · [상세](deep-notes/day-03-full.md) |
+| **01** | 기간과 조건에 맞는 외래 명세서 수는? | **1,450건** | [기록](assignments/assignment-01.md) · [SQL](sql/assignments/01_outpatient_claims.sql) |
+| **02** | 질병별 명세서와 사람 수, 방문 간격은? | J209 **2,554건 / 894명** | [기록](assignments/assignment-02.md) · [SQL](sql/assignments/02_diagnosis_diabetes.sql) |
+| **03** | 진단 코호트에서 병기별 사건 기록은? | **6,873명** 코호트 | [기록](assignments/assignment-03.md) · [SQL](sql/assignments/03_lung_cancer_3year_mortality.sql) |
 
-```mermaid
-flowchart LR
-    A[조회 범위 정의] --> B[테이블 연결]
-    B --> C[그룹과 방문 이력 분석]
-    C --> D[코호트 및 사건 정의]
-    D --> E{행 수·분모·결측 확인}
-    E -->|재검토| A
-    E -->|검증| F[해석 가능한 결과]
-```
-
-과제 수행 기록은 별도로 분리했다. **제출 때 확인한 결과**와 **학습 목적으로 재구성한 SQL**은 같은 것으로 취급하지 않는다.
-
-| 과제 | 실제로 다룬 문제 | 확인된 수치 | 자료 |
-|:--|:--|:--|:--|
-| **ASSIGNMENT 01** | 2025년 7월 외래 명세서 조회·상병명 결합 | **1,450건** (Q1) | [과제 기록](assignments/assignment-01.md) · [SQL](sql/assignments/01_outpatient_claims.sql) |
-| **ASSIGNMENT 02** | 상병별 명세서·수진자, 당뇨 방문 간격 분석 | **J209 2,554건 / 894명**, 방문 간격 **94일** | [과제 기록](assignments/assignment-02.md) · [SQL](sql/assignments/02_diagnosis_diabetes.sql) |
-| **ASSIGNMENT 03** | 진단 코호트와 병기별 1,095일 이내 사망 기록 분석 | **6,873명** 코호트 | [과제 기록](assignments/assignment-03.md) · [SQL](sql/assignments/03_lung_cancer_3year_mortality.sql) |
-
-[세 과제 전체 기록과 근거 구분 보기](assignments/README.md)
+[과제 전체 기록](assignments/README.md) · [SQL 실습 코드](sql/practice/)
 
 ## 4. 주요 SQL과 설명
 
@@ -158,9 +141,7 @@ FROM cohort;
 | 당뇨 방문 간격 90일 초과 | **1건, 94일** | 과제 2에서 확인된 결과. 전체 필터 조건 미복원 |
 | 2010–2017 진단 코호트 | **6,873명** | 과제 3 Q1 |
 
-### 6-2. 과제 3 — 병기별 1,095일 이내 사망 기록
-
-![과제 3 병기별 사망 기록 비율](assets/stage-outcomes.svg)
+### 6-2. 과제 3 — 병기별 1,095일 이내 사망 기록 집계
 
 | 병기 그룹 | 환자 수 | 1,095일 이내 사망 기록 | 기록 비율 |
 |:--|--:|--:|--:|
@@ -170,7 +151,7 @@ FROM cohort;
 | 병기 미상 | 230 | 109 | **47.39%** |
 | **합계** | **6,873** | **2,829** | **41.16%** |
 
-위 결과는 **기존 과제 대화에서 확인된 교육용 합성데이터 집계**다. 사망 기록이 없다는 사실만으로 3년 생존이 확인된 것은 아니므로, 이 표는 **중도절단을 반영한 생존율이 아니다.** 또한 이번 작업에서 DB를 다시 실행해 검증한 수치는 아니다.
+**결과 해석:** 교육용 가상데이터에서 과제 조건에 따라 집계한 **사망 기록 비율**이다. 사망 기록이 없는 환자가 3년 내내 관찰되었다고 확인된 것은 아니므로, 이 표를 실제 환자의 생존율로 읽을 수는 없다.
 
 [결과 집계와 한계 상세](sql/results/README.md) · [과제 3 기록](assignments/assignment-03.md)
 
@@ -187,25 +168,21 @@ SQL을 배우면서 가장 크게 느낀 것은 **쿼리가 실행되는 것과 
 | 확인할 자료 | 저장소 내 경로 |
 |:--|:--|
 | 메인 소개 | **현재 README** (`README.md`) |
-| 3일차 학습 핵심 노트 | [`field-notes/`](field-notes/) |
-| 3일차 상세 개념 정리 | [`deep-notes/`](deep-notes/) |
+| 강의 핵심 노트 | [`field-notes/`](field-notes/) |
+| 상세 강의 노트 | [`deep-notes/`](deep-notes/) |
 | 과제 1·2·3 정리 | [`assignments/`](assignments/) |
 | 과제별 SQL 재구성 | [`sql/assignments/`](sql/assignments/) |
 | 학습용 실습 SQL | [`sql/practice/`](sql/practice/) |
-| 집계 결과와 시각화 | [`sql/results/`](sql/results/) · [`assets/stage-outcomes.svg`](assets/stage-outcomes.svg) |
+| 집계 결과와 CSV | [`sql/results/`](sql/results/) |
 | 오류·문제 해결 사례 | [`case-studies/`](case-studies/) |
 | 실행 및 검증 안내 | [`docs/verification.md`](docs/verification.md) |
 
-**GitHub 저장소 URL:** https://github.com/Justman-yzz/nanodegree-sql
-
-**관련 별도 프로젝트:** [NEXT VALUE — Hitter Radar](https://github.com/Justman-yzz/next-value-hitter-radar) — AI Agent 수업 프로젝트. 이 SQL 수업 실습 데이터와 직접 연결한 프로젝트라고 주장하지 않는다.
+**GitHub 저장소:** [Justman-yzz/nanodegree-sql](https://github.com/Justman-yzz/nanodegree-sql)
 
 ---
 
 <div align="center">
 
-**BEYOND THE QUERY** · SQL FIELD NOTES
-
-<sub>Less about writing queries. More about trusting the right results.</sub>
+**BEYOND THE QUERY** · SQL 강의·실습 기록
 
 </div>
